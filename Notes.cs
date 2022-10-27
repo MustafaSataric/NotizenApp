@@ -13,7 +13,7 @@ namespace NotizenApp
         public string uuid;
         public string time;
 
-        Notes(string note, string topic, string uuid, string time)
+        Notes(string topic, string note, string uuid, string time)
         {
             this.note = note;
             this.topic = topic;
@@ -44,12 +44,46 @@ namespace NotizenApp
                 {
 
                     string[] zeile = sr.ReadLine().Split(';');
-                    Notes premature = new Notes(zeile[0], zeile[1], zeile[2],zeile[3]);
+                    Notes premature = new Notes(zeile[1], zeile[2], zeile[0],zeile[3]);
                     notes.Add(premature);
                 }
 
             }
             return notes;
         }
-}
+
+        public static void change(string title, string note, int id, bool delete = false)
+        {
+            List<Notes> notes = Notes.getNotes();
+            using (StreamWriter writer = new StreamWriter(System.IO.Directory.GetCurrentDirectory()
+            + "/../../../Database/note.txt"))
+            {
+                writer.Write(String.Empty);
+                writer.Close();
+            }
+            using (StreamWriter sw = new StreamWriter(System.IO.Directory.GetCurrentDirectory()
+          + "/../../../Database/note.txt"))
+            {
+                for (int index = 0; index < notes.Count; index++)
+                {
+                    if (index == id)
+                    {
+                        if (!delete)
+                        {
+                            sw.WriteLine(UUID.generateUniqueID() + ";" + title + ";" + note + ";" + (DateTime.Now.Hour + "." + DateTime.Now.Minute + "." + DateTime.Now.Second + "  " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year) + ";");
+                        }
+                    }
+                    else
+                    {
+                        sw.WriteLine(notes[index].uuid + ";" + notes[index].topic + ";" + notes[index].note + ";" + notes[index].time + ";");
+                    }
+                }
+            }
+        }
+        public static void delete(string title, string note, int id)
+        {
+            change(title, note, id, true);
+        }
+
+    }
 }

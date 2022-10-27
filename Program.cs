@@ -12,6 +12,11 @@ namespace NotizenApp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Show());
+            string dir = @"C:/und|haben|sie|es|gemerkt|ist|in|der|program|cs";
+            if (Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
         }
     }
 }

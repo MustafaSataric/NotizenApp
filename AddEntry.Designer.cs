@@ -1,6 +1,6 @@
 ﻿namespace NotizenApp
 {
-    partial class Form1
+    partial class AddEntry
     {
         /// <summary>
         ///  Required designer variable.
@@ -95,7 +95,7 @@
             // currentTime
             // 
             this.currentTime.AutoSize = true;
-            this.currentTime.Location = new System.Drawing.Point(473, 18);
+            this.currentTime.Location = new System.Drawing.Point(357, 22);
             this.currentTime.Name = "currentTime";
             this.currentTime.Size = new System.Drawing.Size(105, 25);
             this.currentTime.TabIndex = 6;

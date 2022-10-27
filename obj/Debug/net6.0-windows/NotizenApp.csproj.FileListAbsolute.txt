@@ -4,7 +4,6 @@ C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\bin\Debug\net6.0-windows\
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\bin\Debug\net6.0-windows\NotizenApp.dll
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\bin\Debug\net6.0-windows\NotizenApp.pdb
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.csproj.AssemblyReference.cache
-C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.Form1.resources
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.csproj.GenerateResource.cache
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.AssemblyInfoInputs.cache
@@ -16,3 +15,4 @@ C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.genruntimeconfig.cache
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\ref\NotizenApp.dll
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.Show.resources
+C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.AddEntry.resources

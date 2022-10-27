@@ -19,17 +19,24 @@ namespace NotizenApp
             InitializeComponent();
         }
 
-        string FirstTwenty(string input)
+        string firstTwenty(string input)
         {
             return input.Length > 20 ? input.Substring(0, 20) : input;
         }
-        private void Abrufen_Load(object sender, EventArgs e)
+
+        private void loadEntrys()
         {
+            allNotes.Items.Clear();
+            notes = Notes.getNotes();
             for (int i = 0; i < notes.Count; i++)
             {
-                allNotes.Items.Add(FirstTwenty(notes[i].note) + " " + notes[i].topic + " " + notes[i].time + " " + notes[i].uuid);
+                allNotes.Items.Add(firstTwenty(notes[i].topic) + " " + notes[i].note + " " + notes[i].time /*+ " " + notes[i].uuid*/);
             }
-            allNotes.SelectedIndex = 0;
+            try { allNotes.SelectedIndex = 0; }catch { }
+        }
+        private void Abrufen_Load(object sender, EventArgs e)
+        {
+            loadEntrys();
         }
 
         private void allNotes_SelectedIndexChanged(object sender, EventArgs e)
@@ -38,5 +45,35 @@ namespace NotizenApp
             note.Text = notes[allNotes.SelectedIndex].note;
         }
 
+        private void changeNote_Click(object sender, EventArgs e)
+        {
+            if(title.Text.Length == 0)
+            {
+                MessageBox.Show("Bitte Titel eingeben");
+            }
+            if (note.Text.Length == 0)
+            {
+                MessageBox.Show("Bitte Notiz eingeben");
+            }
+            if (note.Text.Length != 0 && title.Text.Length != 0)
+            {
+                Notes.change(title.Text, note.Text, allNotes.SelectedIndex);
+            }
+            loadEntrys();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Notes.delete(title.Text, note.Text, allNotes.SelectedIndex);
+                loadEntrys();
+                MessageBox.Show("Ein Eintrag wurde gelöscht");
+            }
+            catch {
+                MessageBox.Show("Kein Eintrag vorhanden");
+            }
+
+        }
     }
 }

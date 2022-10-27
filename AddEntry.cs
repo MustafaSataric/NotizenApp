@@ -1,9 +1,9 @@
 using System.Threading;
 namespace NotizenApp
 {
-    public partial class Form1 : Form
+    public partial class AddEntry : Form
     {
-        public Form1()
+        public AddEntry()
         {
             InitializeComponent();
 
@@ -21,7 +21,10 @@ namespace NotizenApp
             }
             if (topic.Text.Length != 0 && note.Text.Length != 0)
             {
+                MessageBox.Show("Neue Notiz wurde hinzugefügt");
                 Notes.addNote(topic.Text, note.Text);
+                topic.Text = "";
+                note.Text = "";
             }
 
         }
