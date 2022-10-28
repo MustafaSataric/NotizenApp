@@ -18,7 +18,7 @@ namespace NotizenApp
         public string UuID { get => uuid; set => uuid = value; }
         public string Time { get => time; set => time = value; }
 
-
+        // Konstruktor, Methode die bei jeder Instanzierung vom Objekt Notes ausgeführt wird
         Notes(string topic, string note, string uuid, string time)
         {
             this.note = note;
@@ -27,6 +27,7 @@ namespace NotizenApp
             this.time = time;
         }
 
+        // Durch diese Methode werden die Objekte gespeichert
         public static void AddNote(string topic, string note)
         {
             using (StreamWriter sw = File.AppendText(System.IO.Directory.GetCurrentDirectory()
@@ -36,14 +37,12 @@ namespace NotizenApp
 
             }
         }
-
+        // Durch diese Methode werden die Objekte aus der Datei gelesen, instanziert
         public static List<Notes> GetNotes(){
             List<Notes> notes = new List<Notes>();
             using (StreamReader sr = new StreamReader(System.IO.Directory.GetCurrentDirectory()
             + "/../../../Database/note.txt"))
             {
-                string line;
-                int iLfdNr = 0;
                 // Read and display lines from the file until the end of
                 // the file is reached.
                 while (!sr.EndOfStream)
@@ -57,7 +56,10 @@ namespace NotizenApp
             }
             return notes;
         }
-
+        // Diese Methode ändert einen bestimmten eintrag
+        // Alle vorhandenen Einträge werden zwischengespeichert
+        // Die Datei wird geleert
+        // Alls Objekte werden gespeichert mit änderung
         public static void Change(string title, string note, int id, bool delete = false)
         {
             List<Notes> notes = Notes.GetNotes();
@@ -86,6 +88,7 @@ namespace NotizenApp
                 }
             }
         }
+        // Ruft die Change Methode auf nur wird das zu löschende Objekt nicht gespeichert
         public static void Delete(string title, string note, int id)
         {
 

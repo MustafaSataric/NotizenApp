@@ -153,6 +153,23 @@
         rkJggg==
 </value>
   </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Copyright © 2022  UltraSljiva d.o.o. Alle Rechte vorbehalten.
+
+Ultra secure, das UltraSljiva-Logo, Notizen Manager Pro, Notizen Manager Enterprise, UltraSljiva's-CarRental und Ohm 
+Rechner sind Marken der UltraSljiva d.o.o, die in Bosnien und weiteren Ländern und Regionen eingetragen sind.
+Die Verwendung des UltraSljiva-Logos für kommerzielle Zwecke ohne vorherige schriftliche Einwilligung von 
+UltraSljiva kann als Markenmissbrauch und unlauterer Wettbewerb gerichtlich verfolgt werden.
+
+Das Design wurde in enger zusammenarbeit mit UltraMo Inc. entwickelt.
+
+UltraSljiva d.o.o
+
+Brezovo Polje BB.
+
+Brcko Distrikt, BiH, 76216
+</value>
+  </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

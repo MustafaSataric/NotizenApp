@@ -19,7 +19,7 @@ namespace NotizenApp
         {
             InitializeComponent();
         }
-
+        //Methode die einen zwanzigzeiligen String zurückgibt
         string FirstTwenty(string input)
         {
             while(input.Length < 20)
@@ -28,7 +28,7 @@ namespace NotizenApp
             }
             return input.Length > 20 ? input.Substring(0, 20) : input;
         }
-
+        //Methode die alle Einträge lädt
         private void LoadEntrys()
         {
             allNotes.Items.Clear();
@@ -41,6 +41,7 @@ namespace NotizenApp
         }
         private void Abrufen_Load(object sender, EventArgs e)
         {
+            Region = System.Drawing.Region.FromHrgn(UUID.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             if (home)
             {
                 active.Top = 191;
@@ -56,16 +57,19 @@ namespace NotizenApp
             {
                 active.Top = 416;
             }
+            //Form wird Zentriert
             this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
             LoadEntrys();
         }
-
+        //Der gewählte Index wird manipuliert
         private void allNotes_SelectedIndexChanged(object sender, EventArgs e)
         {
             title.Text = notes[allNotes.SelectedIndex].Topic;
             Note.Text = notes[allNotes.SelectedIndex].Note;
         }
 
+        //Es wird geprüft ob alle eingaben korrekt sind falls nicht wird erneute eingabe aufgefordert
+        //Falls doch wird die Notiz bearbeitet
         private void changeNote_Click(object sender, EventArgs e)
         {
             if (notes.Count == 0)
@@ -87,7 +91,7 @@ namespace NotizenApp
             }
             LoadEntrys();
         }
-
+        //Eine Notiz wird gelöscht falls vorhanden
         private void delete_Click(object sender, EventArgs e)
         {
             try
@@ -124,22 +128,28 @@ namespace NotizenApp
 
         }
 
+      
+        //Anwendung wird geschlossen
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        //Derzeite Uhrzeit wird angezeigt
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            currentTime.Text = (" " + DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second + "  " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year);
+        }
+        //Anwendung wird minimiert
+        private void MinimalizeApp_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        // Navigation folgt: derzeites Form wird geschlossen neues aufgerufen
         private void button2_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             new AddEntry().ShowDialog();
         }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            currentTime.Text = (" " + DateTime.Now.Hour + "." + DateTime.Now.Minute + "." + DateTime.Now.Second + "  " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year);
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             active.Top = 416;
@@ -164,5 +174,13 @@ namespace NotizenApp
             Note.Size = new Size(581, 405);
             
         }
+
+        private void InfoNav_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            new Info().ShowDialog();
+        }
+
+       
     }
 }

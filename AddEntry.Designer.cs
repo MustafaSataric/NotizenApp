@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEntry));
             this.AddNote = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Thema = new System.Windows.Forms.Label();
@@ -160,7 +161,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::NotizenApp.Properties.Resources.th1;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(106, 46);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 139);
@@ -188,6 +189,7 @@
             this.InfoNav.TabIndex = 12;
             this.InfoNav.Text = "Info\'s";
             this.InfoNav.UseVisualStyleBackColor = false;
+            this.InfoNav.Click += new System.EventHandler(this.InfoNav_Click);
             // 
             // DeleteNav
             // 
@@ -305,6 +307,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AddNote);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddEntry";
             this.Text = "Notizen-App © Mustafa Sataric";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditEntry));
             this.allNotes = new System.Windows.Forms.ListBox();
             this.title = new System.Windows.Forms.TextBox();
             this.Note = new System.Windows.Forms.TextBox();
@@ -151,7 +152,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::NotizenApp.Properties.Resources.th1;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(106, 46);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 131);
@@ -170,6 +171,7 @@
             this.InfoNav.TabIndex = 11;
             this.InfoNav.Text = "Info\'s";
             this.InfoNav.UseVisualStyleBackColor = true;
+            this.InfoNav.Click += new System.EventHandler(this.InfoNav_Click);
             // 
             // DeleteNav
             // 
@@ -249,6 +251,7 @@
             this.MinimalizeApp.TabIndex = 13;
             this.MinimalizeApp.Text = "-";
             this.MinimalizeApp.UseVisualStyleBackColor = false;
+            this.MinimalizeApp.Click += new System.EventHandler(this.MinimalizeApp_Click);
             // 
             // CloseApp
             // 
@@ -356,6 +359,7 @@
             this.Controls.Add(this.title);
             this.Controls.Add(this.allNotes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditEntry";
             this.Text = "Abrufen";
             this.Load += new System.EventHandler(this.Abrufen_Load);

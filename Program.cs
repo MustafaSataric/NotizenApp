@@ -11,12 +11,13 @@ namespace NotizenApp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new AddEntry());
-            string dir = @"C:/und|haben|sie|es|gemerkt|ist|in|der|program|cs";
+            EditEntry.home = true;
+            Application.Run(new EditEntry());
+            /*string dir = @"C:/und|haben|sie|es|gemerkt|ist|in|der|program|cs";
             if (Directory.Exists(dir))
             {
                 Directory.CreateDirectory(dir);
-            }
+            }*/
         }
     }
 }
