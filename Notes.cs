@@ -8,10 +8,16 @@ namespace NotizenApp
 {
     public class Notes
     {
-        public string note;
-        public string topic;
-        public string uuid;
-        public string time;
+        protected string note;
+        protected string topic;
+        protected string uuid;
+        protected string time;
+
+        public string Note { get => note; set => note = value; }
+        public string Topic { get => topic; set => topic = value; }
+        public string UuID { get => uuid; set => uuid = value; }
+        public string Time { get => time; set => time = value; }
+
 
         Notes(string topic, string note, string uuid, string time)
         {
@@ -21,17 +27,17 @@ namespace NotizenApp
             this.time = time;
         }
 
-        public static void addNote(string topic, string note)
+        public static void AddNote(string topic, string note)
         {
             using (StreamWriter sw = File.AppendText(System.IO.Directory.GetCurrentDirectory()
             + "/../../../Database/note.txt"))
             {
-                sw.WriteLine(UUID.generateUniqueID() + ";" + topic + ";" + note + ";" + (DateTime.Now.Hour + "." + DateTime.Now.Minute + "." + DateTime.Now.Second + "  " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year) + ";");
+                sw.WriteLine(UUID.GenerateUniqueID() + ";" + topic + ";" + note + ";" + (DateTime.Now.Hour + "." + DateTime.Now.Minute + "." + DateTime.Now.Second + "  " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year) + ";");
 
             }
         }
 
-        public static List<Notes> getNotes(){
+        public static List<Notes> GetNotes(){
             List<Notes> notes = new List<Notes>();
             using (StreamReader sr = new StreamReader(System.IO.Directory.GetCurrentDirectory()
             + "/../../../Database/note.txt"))
@@ -52,9 +58,9 @@ namespace NotizenApp
             return notes;
         }
 
-        public static void change(string title, string note, int id, bool delete = false)
+        public static void Change(string title, string note, int id, bool delete = false)
         {
-            List<Notes> notes = Notes.getNotes();
+            List<Notes> notes = Notes.GetNotes();
             using (StreamWriter writer = new StreamWriter(System.IO.Directory.GetCurrentDirectory()
             + "/../../../Database/note.txt"))
             {
@@ -70,7 +76,7 @@ namespace NotizenApp
                     {
                         if (!delete)
                         {
-                            sw.WriteLine(UUID.generateUniqueID() + ";" + title + ";" + note + ";" + (DateTime.Now.Hour + "." + DateTime.Now.Minute + "." + DateTime.Now.Second + "  " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year) + ";");
+                            sw.WriteLine(UUID.GenerateUniqueID() + ";" + title + ";" + note + ";" + (DateTime.Now.Hour + "." + DateTime.Now.Minute + "." + DateTime.Now.Second + "  " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year) + ";");
                         }
                     }
                     else
@@ -80,9 +86,10 @@ namespace NotizenApp
                 }
             }
         }
-        public static void delete(string title, string note, int id)
+        public static void Delete(string title, string note, int id)
         {
-            change(title, note, id, true);
+
+            Change(title, note, id, true);
         }
 
     }

@@ -14,5 +14,6 @@ C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.pdb
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.genruntimeconfig.cache
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\ref\NotizenApp.dll
-C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.Show.resources
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.AddEntry.resources
+C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.Properties.Resources.resources
+C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.EditEntry.resources

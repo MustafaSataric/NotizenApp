@@ -8,7 +8,7 @@ namespace NotizenApp
 {
     internal class UUID
     {
-        public static string generateUniqueID(int _characterLength = 11)
+        public static string GenerateUniqueID(int _characterLength = 11)
         {
             StringBuilder _builder = new StringBuilder();
             Enumerable
