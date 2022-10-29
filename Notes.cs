@@ -78,7 +78,7 @@ namespace NotizenApp
                     {
                         if (!delete)
                         {
-                            sw.WriteLine(UUID.GenerateUniqueID() + ";" + title + ";" + note + ";" + (DateTime.Now.Hour + "." + DateTime.Now.Minute + "." + DateTime.Now.Second + "  " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year) + ";");
+                            sw.WriteLine(UUID.GenerateUniqueID() + ";" + title + ";" + note + ";" + (DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second + "  " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year) + ";");
                         }
                     }
                     else
@@ -89,7 +89,7 @@ namespace NotizenApp
             }
         }
         // Ruft die Change Methode auf nur wird das zu löschende Objekt nicht gespeichert
-        public static void Delete(string title, string note, int id)
+        public static void Delete(string title, string note, int id)    
         {
 
             Change(title, note, id, true);

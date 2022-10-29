@@ -18,3 +18,4 @@ C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.Properties.Resources.resources
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.EditEntry.resources
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.Info.resources
+C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.Navbar.resources

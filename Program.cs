@@ -12,7 +12,7 @@ namespace NotizenApp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             EditEntry.home = true;
-            Application.Run(new EditEntry());
+            Application.Run(new Navbar());
             /*string dir = @"C:/und|haben|sie|es|gemerkt|ist|in|der|program|cs";
             if (Directory.Exists(dir))
             {

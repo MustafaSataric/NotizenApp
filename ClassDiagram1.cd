@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NotizenApp.Notes">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQgBAAAAABBAAAAAAAAAAAAAAAEAAAAAAAAAACEIAQA=</HashCode>
+      <FileName>Notes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotizenApp.Program">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotizenApp.UUID">
+    <Position X="0.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>UUID.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotizenApp.AddEntry">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAAAAAACEAABAAAACAAAACAAAAIACAAEQAAAAIAEA=</HashCode>
+      <FileName>AddEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotizenApp.EditEntry">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAQCAAABAAAACAAAAGAAAAAACQAAAAAAEAAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotizenApp.Info">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABIAAACAAAACAAQAICGAAAAwAAAAAEA=</HashCode>
+      <FileName>Info.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotizenApp.Navbar">
+    <Position X="12" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEQAAASCAAIFAAACGACADCABQAIACAABAAISBAAlA=</HashCode>
+      <FileName>Navbar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
