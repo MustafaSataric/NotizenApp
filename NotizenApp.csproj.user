@@ -13,5 +13,8 @@
     <Compile Update="Navbar.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Splashscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

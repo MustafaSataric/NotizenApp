@@ -32,8 +32,11 @@ namespace NotizenApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             //Form wird zentriert
             this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
+            //Ecken werden rund
+            Region = System.Drawing.Region.FromHrgn(UUID.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void currentTime_Tick(object sender, EventArgs e)

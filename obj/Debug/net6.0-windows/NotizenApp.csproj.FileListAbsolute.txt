@@ -19,3 +19,7 @@ C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.EditEntry.resources
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.Info.resources
 C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.Navbar.resources
+C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.SplashScreen.resources
+C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\obj\Debug\net6.0-windows\NotizenApp.csproj.CopyComplete
+C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\bin\Debug\net6.0-windows\CircularProgressBar_NET5.dll
+C:\Users\satar\OneDrive\Dokumente\GitHub\C#\NotizenApp\bin\Debug\net6.0-windows\WinFormAnimation_NET5.dll

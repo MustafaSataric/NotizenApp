@@ -1,11 +1,67 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {}
+    "net6.0-windows7.0": {
+      "CircularProgressBar_NET5/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "WinFormAnimation-NET5": "2.0.0"
+        },
+        "compile": {
+          "lib/net5.0-windows7.0/CircularProgressBar_NET5.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/CircularProgressBar_NET5.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "WinFormAnimation-NET5/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/WinFormAnimation_NET5.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/WinFormAnimation_NET5.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CircularProgressBar_NET5/3.0.0": {
+      "sha512": "qtg1nEX2ZvLquRQXXkSFC9aJ8jCn/VPgjWwsHEvFrORWh8JvO/vzE/kCwIYXulAisk3P7RVSIBd7VACcuYShAA==",
+      "type": "package",
+      "path": "circularprogressbar_net5/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.md",
+        "circularprogressbar_net5.3.0.0.nupkg.sha512",
+        "circularprogressbar_net5.nuspec",
+        "lib/net5.0-windows7.0/CircularProgressBar_NET5.dll"
+      ]
+    },
+    "WinFormAnimation-NET5/2.0.0": {
+      "sha512": "xsqrJBJUGVCcdMIAr2gGstpVyiBR2VXvbl8lMTEpCiSQ6xy3WL679tc27nBZoyOgaZQ2Jpi7j8b7WEmPztOtdg==",
+      "type": "package",
+      "path": "winformanimation-net5/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.md",
+        "lib/net5.0/WinFormAnimation_NET5.dll",
+        "winformanimation-net5.2.0.0.nupkg.sha512",
+        "winformanimation-net5.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": []
+    "net6.0-windows7.0": [
+      "CircularProgressBar_NET5 >= 3.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\satar\\.nuget\\packages\\": {}
@@ -45,6 +101,12 @@
     "frameworks": {
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "CircularProgressBar_NET5": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

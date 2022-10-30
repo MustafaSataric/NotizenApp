@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "V6nPG39+rcMRlmR/Dw8tgzE6rFyC7orcVviqEnZTfCuTjVER20dPRs6p6b5ygt2Flu2VxcDsc+Pp6Gjzsz7low==",
+  "dgSpecHash": "n/7DA1A7hqLjH1c44ODJg0uh9Bj9StZcbq151w3V8TZIgCeN51bbsLBxlWPtmZSWOzPvBhV89C1aGdFSGK9sUQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\satar\\OneDrive\\Dokumente\\GitHub\\C#\\NotizenApp\\NotizenApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\satar\\.nuget\\packages\\circularprogressbar_net5\\3.0.0\\circularprogressbar_net5.3.0.0.nupkg.sha512",
+    "C:\\Users\\satar\\.nuget\\packages\\winformanimation-net5\\2.0.0\\winformanimation-net5.2.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

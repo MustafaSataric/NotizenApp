@@ -47,7 +47,7 @@
             this.AddNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddNote.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AddNote.ForeColor = System.Drawing.Color.White;
-            this.AddNote.Location = new System.Drawing.Point(12, 455);
+            this.AddNote.Location = new System.Drawing.Point(12, 516);
             this.AddNote.Name = "AddNote";
             this.AddNote.Size = new System.Drawing.Size(249, 53);
             this.AddNote.TabIndex = 0;
@@ -93,11 +93,11 @@
             this.note.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.note.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.note.ForeColor = System.Drawing.Color.White;
-            this.note.Location = new System.Drawing.Point(15, 139);
+            this.note.Location = new System.Drawing.Point(15, 130);
             this.note.MinimumSize = new System.Drawing.Size(553, 310);
             this.note.Multiline = true;
             this.note.Name = "note";
-            this.note.Size = new System.Drawing.Size(1050, 310);
+            this.note.Size = new System.Drawing.Size(1050, 380);
             this.note.TabIndex = 4;
             // 
             // label2
@@ -132,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.ClientSize = new System.Drawing.Size(1099, 541);
+            this.ClientSize = new System.Drawing.Size(1099, 609);
             this.ControlBox = false;
             this.Controls.Add(this.currentTimeLabel);
             this.Controls.Add(this.label2);
