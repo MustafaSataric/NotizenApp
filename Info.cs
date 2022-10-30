@@ -39,7 +39,7 @@ namespace NotizenApp
         {
             try
             {
-                Process.Start("CMD.exe", "/C start msedge https://github.com/SemirSljiivic");
+                Process.Start("CMD.exe", "/C start msedge https://cdn.discordapp.com/attachments/1023686316937990185/1035982070901637160/klassendiagramm.png");
             }
             catch { MessageBox.Show("Sie haben kein Edge auf ihren Gerät daher funktioniert es nicht."); }
         }
