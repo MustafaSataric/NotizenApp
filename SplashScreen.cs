@@ -36,6 +36,7 @@ namespace NotizenApp
             if (circularProgressBar1.Value == 100)
             {
                 timer1.Enabled = false;
+                new Navbar().Location = new Point((Screen.PrimaryScreen.Bounds.Width - new Navbar().Width) / 2, (Screen.PrimaryScreen.Bounds.Height - new Navbar().Height) / 2);
                 Navbar se_form = new Navbar();
                 se_form.Show();
                 this.Hide();

@@ -47,11 +47,14 @@ namespace NotizenApp
                 //active.Top = 191;
                 ChangeNote.Visible = false;
                 DeleteNote.Visible = false;
-                Note.Size = new Size(581, 416);
+                Note.Size = new Size(581, 466);
+                Note.Enabled = false;
+                title.Enabled = false;
             }
             else
             {
-
+                Note.Enabled = true;
+                title.Enabled = true;
                 ChangeNote.Visible = true;
                 DeleteNote.Visible = true;
             }

@@ -54,7 +54,7 @@
             this.allNotes.ItemHeight = 25;
             this.allNotes.Location = new System.Drawing.Point(21, 56);
             this.allNotes.Name = "allNotes";
-            this.allNotes.Size = new System.Drawing.Size(523, 475);
+            this.allNotes.Size = new System.Drawing.Size(523, 525);
             this.allNotes.TabIndex = 0;
             this.allNotes.SelectedIndexChanged += new System.EventHandler(this.allNotes_SelectedIndexChanged);
             // 
@@ -78,7 +78,7 @@
             this.Note.Location = new System.Drawing.Point(550, 115);
             this.Note.Multiline = true;
             this.Note.Name = "Note";
-            this.Note.Size = new System.Drawing.Size(581, 350);
+            this.Note.Size = new System.Drawing.Size(581, 411);
             this.Note.TabIndex = 2;
             // 
             // ChangeNote
@@ -88,7 +88,7 @@
             this.ChangeNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChangeNote.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ChangeNote.ForeColor = System.Drawing.Color.White;
-            this.ChangeNote.Location = new System.Drawing.Point(550, 482);
+            this.ChangeNote.Location = new System.Drawing.Point(550, 532);
             this.ChangeNote.Name = "ChangeNote";
             this.ChangeNote.Size = new System.Drawing.Size(171, 49);
             this.ChangeNote.TabIndex = 3;
@@ -103,7 +103,7 @@
             this.DeleteNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteNote.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.DeleteNote.ForeColor = System.Drawing.Color.White;
-            this.DeleteNote.Location = new System.Drawing.Point(727, 482);
+            this.DeleteNote.Location = new System.Drawing.Point(727, 532);
             this.DeleteNote.Name = "DeleteNote";
             this.DeleteNote.Size = new System.Drawing.Size(171, 49);
             this.DeleteNote.TabIndex = 4;
