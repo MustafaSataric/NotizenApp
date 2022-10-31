@@ -50,7 +50,7 @@ namespace NotizenApp
         private void HomeNav_Click(object sender, EventArgs e)
         {
             active.Visible = true;
-            active.Top = 191;
+            active.Top = HomeNav.Top;
             EditEntry.home = true;
             Loadform(new EditEntry());
             Loadform(new EditEntry());
@@ -59,7 +59,7 @@ namespace NotizenApp
         private void AddNav_Click(object sender, EventArgs e)
         {
             active.Visible = true;
-            active.Top = 266;
+            active.Top = AddNav.Top;
             Loadform(new AddEntry());
             Loadform(new AddEntry());
         }
@@ -67,7 +67,7 @@ namespace NotizenApp
         private void EditNav_Click(object sender, EventArgs e)
         {
             active.Visible = true;
-            active.Top = 341;
+            active.Top = EditNav.Top;
             EditEntry.home = false;
             Loadform(new EditEntry());
             Loadform(new EditEntry());
@@ -76,7 +76,7 @@ namespace NotizenApp
         private void DeleteNav_Click(object sender, EventArgs e)
         {
             active.Visible = true;
-            active.Top = 416;
+            active.Top = DeleteNav.Top;
             EditEntry.home = false;
             Loadform(new EditEntry());
             Loadform(new EditEntry());
@@ -85,7 +85,7 @@ namespace NotizenApp
         private void InfoNav_Click(object sender, EventArgs e)
         {
             active.Visible = true;
-            active.Top = 491;
+            active.Top = InfoNav.Top;
             Loadform(new Info());
             Loadform(new Info());
         }

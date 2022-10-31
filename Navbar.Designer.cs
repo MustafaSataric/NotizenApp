@@ -221,7 +221,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(8, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1043, 550);
+            this.label1.Size = new System.Drawing.Size(1093, 550);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             // 
