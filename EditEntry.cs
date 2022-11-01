@@ -14,6 +14,7 @@ namespace NotizenApp
     {
         List<Notes> notes = Notes.GetNotes();
         public static bool home = true;
+        private int SelectedIndex = 0;
         public EditEntry()
         {
             InitializeComponent();
@@ -23,22 +24,30 @@ namespace NotizenApp
         {
             try
             {
-                return input.Substring(0, 5);
+                return input.Substring(0, 10);
             }
             catch { return input; }
         }
         //Methode die alle Einträge lädt
         private void LoadEntrys()
         {
-            allNotes.Items.Clear();
+
+            topicBox.Items.Clear();
+            noteBox.Items.Clear();
+            dateBox.Items.Clear();
             notes = Notes.GetNotes();
             for (int i = 0; i < notes.Count; i++)
             {
                 string CurNote = FirstTwenty(notes[i].Note);
                 string CurTopic = FirstTwenty(notes[i].Topic);
-                allNotes.Items.Add(CurTopic + " " + CurNote + " " + notes[i].Time /*+ " " + notes[i].UuID*/);
+                topicBox.Items.Add(CurTopic);
+                noteBox.Items.Add(CurNote/*+ " " + notes[i].UuID*/);
+                dateBox.Items.Add(notes[i].Time /*+ " " + notes[i].UuID*/);
             }
-            try { allNotes.SelectedIndex = 0; }catch { }
+            try {
+                SetIndex();
+            }
+            catch { }
         }
         private void Abrufen_Load(object sender, EventArgs e)
         {
@@ -64,10 +73,34 @@ namespace NotizenApp
             LoadEntrys();
         }
         //Der gewählte Index wird manipuliert
-        private void allNotes_SelectedIndexChanged(object sender, EventArgs e)
+        private void topicBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            title.Text = notes[allNotes.SelectedIndex].Topic;
-            Note.Text = notes[allNotes.SelectedIndex].Note.Replace(".", System.Environment.NewLine);
+            SelectedIndex = topicBox.SelectedIndex;
+            SetIndex();
+            title.Text = notes[SelectedIndex].Topic;
+            Note.Text = notes[SelectedIndex].Note.Replace(".", System.Environment.NewLine);
+        }
+
+        private void dateBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedIndex = dateBox.SelectedIndex;
+            SetIndex();
+            title.Text = notes[SelectedIndex].Topic;
+            Note.Text = notes[SelectedIndex].Note.Replace(".", System.Environment.NewLine);
+        }
+        private void noteBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedIndex = noteBox.SelectedIndex ;
+            SetIndex();
+            title.Text = notes[SelectedIndex].Topic;
+            Note.Text = notes[SelectedIndex].Note.Replace(".", System.Environment.NewLine);
+        }
+
+        private void SetIndex()
+        {
+            topicBox.SelectedIndex = SelectedIndex;
+            noteBox.SelectedIndex = SelectedIndex;
+            dateBox.SelectedIndex = SelectedIndex;
         }
 
         //Es wird geprüft ob alle eingaben korrekt sind falls nicht wird erneute eingabe aufgefordert
@@ -88,7 +121,7 @@ namespace NotizenApp
             }
             else  if (Note.Text.Length != 0 && title.Text.Length != 0 )
             {
-                Notes.Change(title.Text, Note.Text, allNotes.SelectedIndex);
+                Notes.Change(title.Text, Note.Text, topicBox.SelectedIndex);
                 MessageBox.Show("Ein Eintrag wurde bearbeitet");
             }
             LoadEntrys();
@@ -98,7 +131,7 @@ namespace NotizenApp
         {
             try
             {
-                Notes.Delete(title.Text, Note.Text, allNotes.SelectedIndex);
+                Notes.Delete(title.Text, Note.Text, topicBox.SelectedIndex);
                 LoadEntrys();
                 if (notes.Count > 0)
                 {

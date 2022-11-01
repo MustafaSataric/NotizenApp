@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditEntry));
-            this.allNotes = new System.Windows.Forms.ListBox();
+            this.topicBox = new System.Windows.Forms.ListBox();
             this.title = new System.Windows.Forms.TextBox();
             this.Note = new System.Windows.Forms.TextBox();
             this.ChangeNote = new System.Windows.Forms.Button();
@@ -42,21 +42,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.currentTime = new System.Windows.Forms.Timer(this.components);
             this.currentTimeLabel = new System.Windows.Forms.Label();
+            this.noteBox = new System.Windows.Forms.ListBox();
+            this.dateBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // allNotes
+            // topicBox
             // 
-            this.allNotes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
-            this.allNotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.allNotes.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.allNotes.ForeColor = System.Drawing.Color.White;
-            this.allNotes.FormattingEnabled = true;
-            this.allNotes.ItemHeight = 25;
-            this.allNotes.Location = new System.Drawing.Point(21, 56);
-            this.allNotes.Name = "allNotes";
-            this.allNotes.Size = new System.Drawing.Size(523, 525);
-            this.allNotes.TabIndex = 0;
-            this.allNotes.SelectedIndexChanged += new System.EventHandler(this.allNotes_SelectedIndexChanged);
+            this.topicBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.topicBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.topicBox.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.topicBox.ForeColor = System.Drawing.Color.White;
+            this.topicBox.FormattingEnabled = true;
+            this.topicBox.ItemHeight = 25;
+            this.topicBox.Location = new System.Drawing.Point(21, 56);
+            this.topicBox.Name = "topicBox";
+            this.topicBox.Size = new System.Drawing.Size(165, 525);
+            this.topicBox.TabIndex = 0;
+            this.topicBox.SelectedIndexChanged += new System.EventHandler(this.topicBox_SelectedIndexChanged);
             // 
             // title
             // 
@@ -182,12 +184,42 @@
             this.currentTimeLabel.TabIndex = 12;
             this.currentTimeLabel.Text = "label6";
             // 
+            // noteBox
+            // 
+            this.noteBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.noteBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.noteBox.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.noteBox.ForeColor = System.Drawing.Color.White;
+            this.noteBox.FormattingEnabled = true;
+            this.noteBox.ItemHeight = 25;
+            this.noteBox.Location = new System.Drawing.Point(178, 56);
+            this.noteBox.Name = "noteBox";
+            this.noteBox.Size = new System.Drawing.Size(151, 525);
+            this.noteBox.TabIndex = 13;
+            this.noteBox.SelectedIndexChanged += new System.EventHandler(this.noteBox_SelectedIndexChanged);
+            // 
+            // dateBox
+            // 
+            this.dateBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.dateBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dateBox.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateBox.ForeColor = System.Drawing.Color.White;
+            this.dateBox.FormattingEnabled = true;
+            this.dateBox.ItemHeight = 25;
+            this.dateBox.Location = new System.Drawing.Point(327, 56);
+            this.dateBox.Name = "dateBox";
+            this.dateBox.Size = new System.Drawing.Size(217, 525);
+            this.dateBox.TabIndex = 14;
+            this.dateBox.SelectedIndexChanged += new System.EventHandler(this.dateBox_SelectedIndexChanged);
+            // 
             // EditEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(1158, 588);
+            this.Controls.Add(this.dateBox);
+            this.Controls.Add(this.noteBox);
             this.Controls.Add(this.currentTimeLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -198,7 +230,7 @@
             this.Controls.Add(this.ChangeNote);
             this.Controls.Add(this.Note);
             this.Controls.Add(this.title);
-            this.Controls.Add(this.allNotes);
+            this.Controls.Add(this.topicBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditEntry";
@@ -211,7 +243,7 @@
 
         #endregion
 
-        private ListBox allNotes;
+        private ListBox topicBox;
         private TextBox title;
         private TextBox Note;
         private Button ChangeNote;
@@ -223,5 +255,7 @@
         private Label label5;
         private System.Windows.Forms.Timer currentTime;
         private Label currentTimeLabel;
+        private ListBox noteBox;
+        private ListBox dateBox;
     }
 }
