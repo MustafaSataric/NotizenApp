@@ -12,17 +12,18 @@ namespace NotizenApp
 {
     public partial class Navbar : Form
     {
+        int TgMove, MalX, MalY;
         public Navbar()
         {
             InitializeComponent();
         }
-
         private void Navbar_Load(object sender, EventArgs e)
         {
             //Form wird zentriert
             this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
             //Ecken werden rund
             Region = System.Drawing.Region.FromHrgn(UUID.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+
         }
         //Methode die Form als Kindform in Vaterform "Navbar" einfügt
         public void Loadform(object Form)
@@ -94,10 +95,26 @@ namespace NotizenApp
         {
             currentTimeLabel.Text = (DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second + "  " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year);
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        //Methoden um Form verschiebbar zu machen
+        //Wenn man auf das Panel klickt wird eine Flagge gesetzt
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
-
+            TgMove = 1;
+            MalX = e.X;
+            MalY = e.Y;
+        }
+        //Wenn man nicht auf das Panel klickt wird eine Flagge auf falsch gesetzt
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            TgMove = 0;
+        }
+        //Form wird verschiben falls Panel angeklickt ist und verschoben wird
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (TgMove == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - MalX, MousePosition.Y - MalY);
+            }
         }
     }
 }
