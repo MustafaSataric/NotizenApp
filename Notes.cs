@@ -33,6 +33,8 @@ namespace NotizenApp
             using (StreamWriter sw = File.AppendText(System.IO.Directory.GetCurrentDirectory()
             + "/../../../Database/note.txt"))
             {
+                note = note.Replace(System.Environment.NewLine, ".");
+                //MessageBox.Show(note);
                 sw.WriteLine(UUID.GenerateUniqueID() + ";" + topic + ";" + note + ";" + (DateTime.Now.Hour + "." + DateTime.Now.Minute + "." + DateTime.Now.Second + "  " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year) + ";");
 
             }
@@ -78,11 +80,13 @@ namespace NotizenApp
                     {
                         if (!delete)
                         {
+                            note = note.Replace(System.Environment.NewLine, ".");
                             sw.WriteLine(UUID.GenerateUniqueID() + ";" + title + ";" + note + ";" + (DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second + "  " + DateTime.Now.Day + "." + DateTime.Now.Month + "." + DateTime.Now.Year) + ";");
                         }
                     }
                     else
                     {
+                        note = note.Replace(System.Environment.NewLine, ".");
                         sw.WriteLine(notes[index].uuid + ";" + notes[index].topic + ";" + notes[index].note + ";" + notes[index].time + ";");
                     }
                 }

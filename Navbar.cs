@@ -16,14 +16,14 @@ namespace NotizenApp
         public Navbar()
         {
             InitializeComponent();
+            //Ecken werden rund
+            Region = System.Drawing.Region.FromHrgn(UUID.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
         private void Navbar_Load(object sender, EventArgs e)
         {
             //Form wird zentriert
             this.Location = new Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
-            //Ecken werden rund
-            Region = System.Drawing.Region.FromHrgn(UUID.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-
+           
         }
         //Methode die Form als Kindform in Vaterform "Navbar" einfügt
         public void Loadform(object Form)

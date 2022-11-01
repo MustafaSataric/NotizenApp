@@ -21,11 +21,11 @@ namespace NotizenApp
         //Methode die einen zwanzigzeiligen String zurückgibt
         string FirstTwenty(string input)
         {
-            while(input.Length < 20)
+            try
             {
-                input+= " ";
+                return input.Substring(0, 5);
             }
-            return input.Length > 20 ? input.Substring(0, 20) : input;
+            catch { return input; }
         }
         //Methode die alle Einträge lädt
         private void LoadEntrys()
@@ -34,7 +34,9 @@ namespace NotizenApp
             notes = Notes.GetNotes();
             for (int i = 0; i < notes.Count; i++)
             {
-                allNotes.Items.Add(FirstTwenty(notes[i].Topic) + " " + FirstTwenty(notes[i].Note) + " " + notes[i].Time /*+ " " + notes[i].UuID*/);
+                string CurNote = FirstTwenty(notes[i].Note);
+                string CurTopic = FirstTwenty(notes[i].Topic);
+                allNotes.Items.Add(CurTopic + " " + CurNote + " " + notes[i].Time /*+ " " + notes[i].UuID*/);
             }
             try { allNotes.SelectedIndex = 0; }catch { }
         }
@@ -65,7 +67,7 @@ namespace NotizenApp
         private void allNotes_SelectedIndexChanged(object sender, EventArgs e)
         {
             title.Text = notes[allNotes.SelectedIndex].Topic;
-            Note.Text = notes[allNotes.SelectedIndex].Note;
+            Note.Text = notes[allNotes.SelectedIndex].Note.Replace(".", System.Environment.NewLine);
         }
 
         //Es wird geprüft ob alle eingaben korrekt sind falls nicht wird erneute eingabe aufgefordert
@@ -100,7 +102,7 @@ namespace NotizenApp
                 LoadEntrys();
                 if (notes.Count > 0)
                 {
-                    MessageBox.Show("Ein Eintrag wurde bearbeitet");
+                    MessageBox.Show("Ein Eintrag wurde gelöscht");
                 }
                 else
                 {
